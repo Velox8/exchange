@@ -16,18 +16,55 @@ body {
 .wrapper {
     padding: 50px;
     width: 800px;
-    background-image: linear-gradient(#3F4B59, #333D46);
+    background: linear-gradient(#ec3ad5, #f050db);
     color: #fff;
     text-align: center;
     border: 1px solid #1C232D;
     border-radius: 15px;
-    box-shadow: 0 0 15px #1C232D;
+    box-shadow: 0 0 15px #1C232D;overflow: hidden;
 }
 
 .wrapper h1 {
     margin-bottom: 10px;
     font-size: 36px;
+    position: relative;
 }
+
+.wrapper h1::before {
+	position: absolute;
+	left: 50px;
+
+	height: 100%;
+	/* width: 30px; */
+
+	box-shadow: 0px 0px 60px 80px rgba(247, 241, 241, 0.853);
+    opacity: 0.6;
+	background-image: none;
+	content: '';
+	animation: box-boxms 6s linear infinite;
+	
+	 
+
+}
+
+
+
+@keyframes box-boxms {
+	0% {
+		left: 0;
+		/* width: 0%; */
+	}
+
+	/* 26% {width: 20%;} */
+
+	50% {
+		left: calc(100% - 30px);
+		/* width: 0%; */
+	}
+	/* 75% {width: 20%;} */
+	100% {left: 0;}
+}
+
 
 .wrapper p {
     margin-bottom: 50px;
@@ -119,7 +156,7 @@ body {
     .swap {
         align-self: center;
     }
-    
+
     input:focus,
     select:focus {
         outline: none !important;

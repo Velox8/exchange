@@ -15,8 +15,7 @@ const amountTwo = document.querySelector('.amount-two');
 const swapBtn = document.querySelector('.swap');
 const rateInfo = document.querySelector('.rate-info');
 
-const calculateValue = () => {
-	fetch(`https://api.exchangerate.host/latest?base=${currencyOne.value}&symbols=${currencyTwo.value}`)
+const calculateValue = () => { 	fetch(`https://api.exchangerate.host/latest?base=${currencyOne.value}&symbols=${currencyTwo.value}`)
     .then(res => res.json())
 	.then(data => {
 			// console.log(data);
